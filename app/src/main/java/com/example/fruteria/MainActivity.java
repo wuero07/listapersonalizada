@@ -27,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         fruits = new ArrayList<>();
-        fruits.add(new Fruit("manzana", R.drawable.manzana));
-        fruits.add(new Fruit("Banana", R.drawable.banana));
-        fruits.add(new Fruit("uva", R.drawable.uva));
-        fruits.add(new Fruit("sandia", R.drawable.sandia));
-        fruits.add(new Fruit("naranja", R.drawable.naranja));
+        fruits.add(new Fruit(getString(R.string.apple), R.drawable.manzana));
+        fruits.add(new Fruit(getString(R.string.banana), R.drawable.banana));
+        fruits.add(new Fruit(getString(R.string.grape), R.drawable.uva));
+        fruits.add(new Fruit(getString(R.string.watermelon), R.drawable.sandia));
+        fruits.add(new Fruit(getString(R.string.orange), R.drawable.naranja));
+
 
         fruitAdapter = new FruitAdapter(fruits, new FruitAdapter.OnQuantityChangedListener() {
             @Override
